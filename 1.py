@@ -1,3 +1,4 @@
+from turtle import pos, position
 import pygame
 import random
 import waz
@@ -22,8 +23,7 @@ def main():
         OknoGry.fill((0,0,0))
         pygame.time.delay(200)
         
-            #rysowanie jabłka
-        pygame.draw.circle(OknoGry,(0,255,0),(xApple,yApple),20)
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run=False
@@ -44,10 +44,13 @@ def main():
         #pobranie pozycji glowy weza
         glowa=obiektWaz.pozycje[-1]
         #waż zjada jabłko
-        if glowa[0]==xApple-20 and glowa[1]==yApple-20:
-            obiektWaz.eating()
-            pygame.draw.circle(OknoGry,(255,255,0),(xApple,yApple),20)
-            
+        for nrApple in objectApple[::]:
+                positionApple=nrApple.getPosition()
+                if glowa[0]==positionApple[0]-20 and glowa[1]==positionApple[1]-20:
+                    obiektWaz.eating()
+                    nrApple.randomPosition()
+        #Rysowanie jabłka
+                nrApple.drawApple(OknoGry)
         
         czcionka=pygame.font.SysFont('comicsans',20)
         tekst=czcionka.render("Punkty: {0}".format(obiektWaz.punkty),1,(255,255,255))
