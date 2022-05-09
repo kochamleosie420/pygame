@@ -67,6 +67,9 @@ def main():
                     nrApple.randomPosition()                    
         #Rysowanie jabłka
                 nrApple.drawApple(OknoGry)
+        #Zjadanie sie wezy nawzajem
+        obiektWaz1.biteMe(glowa2)
+        obiektWaz2.biteMe(glowa1)
         
         czcionka=pygame.font.SysFont('comicsans',20)
         tekst1=czcionka.render("Gracz 1: {0}".format(obiektWaz1.punkty),1,(255,255,255))

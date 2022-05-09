@@ -4,7 +4,7 @@ import pygame
 class Jablko():
     #konstruktor klasy
     def __init__(self):
-        self.kolor=(18,27,11)
+        self.kolor=(193,103,103)
         self.applePosition=(20,20)
         self.randomPosition()
     def setPosition(self,x,y):
