@@ -3,6 +3,7 @@ import pygame
 import random
 import waz
 import jablko
+rozdzielczosc=400
 
 iloscJablek=9
 def main():
@@ -15,7 +16,7 @@ def main():
     xApple=random.randint(0,9)*40+20
     yApple=random.randint(0,9)*40+20
     pygame.init()
-    OknoGry=pygame.display.set_mode((400,400),0,32)
+    OknoGry=pygame.display.set_mode((rozdzielczosc,rozdzielczosc),0,32)
     run=True
     zmienna1=120
     zmienna2=120
