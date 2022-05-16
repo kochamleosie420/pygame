@@ -4,14 +4,18 @@ import random
 import waz
 import jablko
 rozdzielczosc=400
-
+obiektWaz1=waz.Snake()
+obiektWaz2=waz.Snake()
+def zmienkolorWaz1(color):
+    obiektWaz1.setcolor(color)
+def zmienkolorWaz2(color):
+    obiektWaz2.setcolor(color)
 iloscJablek=9
 def main():
     objectApple=[]
     for nrApple in range(0,iloscJablek):
         objectApple.append(jablko.Jablko())
-    obiektWaz1=waz.Snake()
-    obiektWaz2=waz.Snake()
+    
     
     xApple=random.randint(0,9)*40+20
     yApple=random.randint(0,9)*40+20
