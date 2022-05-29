@@ -16,7 +16,7 @@ class Snake():
     #pobranie pozycji głowy
     def getHead(self):
         return self.pozycje[-1]
-    def eating(self):
+    def eating(self): #funkcja dzieki ktorej po zjedzeniu jablka waz powieksza sie o 1 segment i dodaje 1 punkt
         self.dlugosc+=1
         self.punkty+=1
     def drawSnake(self,OknoGry):
@@ -55,6 +55,7 @@ class Snake():
         if zmienna2<0:
             zmienna2=lekcja1.rozdzielczosc
         return (zmienna1,zmienna2)
+         #Zjadanie sie wezy nawzajem
     def biteMe(self,glowa):
         for Czesciciala in self.pozycje[::]:
             if glowa[0] == Czesciciala[0] and glowa[1]==Czesciciala[1]:
